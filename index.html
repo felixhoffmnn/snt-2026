@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SNT 2026 — Selfnet e.V.</title>
+  <meta name="description" content="SNT 2026 by Selfnet e.V. — a student-run event for internet, networks, and knowledge sharing." />
+  <meta property="og:title" content="SNT 2026 — Selfnet e.V." />
+  <meta property="og:description" content="Join students, engineers, and researchers for talks, workshops, and networking." />
+  <meta property="og:type" content="event" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f172a'/%3E%3Cpath d='M16 32h32M24 24l16 16M40 24L24 40' stroke='%23a3e635' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <style>
+    :root { --bg:#0b1220; --card:#101a2d; --muted:#8aa0c7; --accent:#a3e635; --text:#e5eefb; --ring:#2b3a5a; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; line-height:1.5; color:var(--text); background:radial-gradient(1200px 800px at 80% -100px, #12203b 10%, transparent 50%), var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px; }
+    .logo { inline-size:36px; block-size:36px; border-radius:10px; background:linear-gradient(135deg, #1d2b4a, #101a2d); display:grid; place-items:center; box-shadow: 0 4px 20px rgba(0,0,0,.35), inset 0 0 0 1px #1d2b4a; }
+    .logo svg { width:22px; height:22px; }
+    .nav a.btn { padding:10px 14px; border-radius:12px; background: var(--accent); color:#0b1220; font-weight:700; box-shadow:0 6px 20px rgba(163, 230, 53, .2); }
+    .nav a.btn:hover { filter: brightness(.95); text-decoration:none; }
+
+    .hero { display:grid; grid-template-columns: 1.3fr 1fr; gap:28px; padding:40px 0 14px; align-items:center; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); line-height:1.1; margin:0 0 12px; }
+    .hero p { color: var(--muted); margin:0 0 20px; }
+    .hero .pill { display:inline-flex; align-items:center; gap:10px; font-size:.92rem; background: rgba(163,230,53,.08); border:1px solid rgba(163,230,53,.25); padding:8px 12px; border-radius:999px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); border: 1px solid var(--ring); border-radius:18px; padding:18px; box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.02); }
+
+    .grid { display:grid; gap:18px; grid-template-columns: repeat(12, 1fr); }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+
+    .section { padding: 30px 0; }
+    .section h2 { font-size: clamp(1.25rem, 2.5vw, 1.8rem); margin:0 0 14px; }
+    .list { display:grid; gap:12px; }
+    .item { padding:14px; border-radius:14px; border:1px dashed var(--ring); background: rgba(255,255,255,.02); }
+
+    .kpis { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:12px; }
+    .kpis .kpi { text-align:center; padding:14px; border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); border:1px solid var(--ring); }
+    .kpi .big { font-size:clamp(1.4rem, 2.5vw, 2rem); font-weight:800; }
+    .kpi .label { color:var(--muted); font-size:.9rem; }
+
+    .cta { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-block; padding:12px 16px; border-radius:14px; font-weight:700; border:1px solid var(--ring); }
+    .btn.primary { background: var(--accent); color:#0b1220; border-color:transparent; }
+    .btn.ghost { background: transparent; color: var(--text); }
+
+    .footer { margin-top: 36px; padding: 24px 0 40px; color: var(--muted); font-size:.95rem; border-top: 1px solid var(--ring); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(6, 1fr); }
+      .span-8 { grid-column: span 6; }
+      .span-6 { grid-column: span 6; }
+      .span-4 { grid-column: span 6; }
+      .kpis { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "SNT 2026",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "startDate": "2026-05-15T09:00:00+02:00",
+    "endDate": "2026-05-17T18:00:00+02:00",
+    "location": {
+      "@type": "Place",
+      "name": "TBD",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Stuttgart",
+        "addressCountry": "DE"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Selfnet e.V.",
+      "url": "https://selfnet.de"
+    },
+    "description": "A student-run event by Selfnet e.V. focused on internet, networks, and knowledge sharing."
+  }
+  </script>
+</head>
+<body>
+  <header class="container nav" aria-label="Top navigation">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12h18M7 7l10 10M17 7L7 17" stroke="#a3e635" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <span>SNT 2026 • Selfnet e.V.</span>
+    </div>
+    <nav aria-label="Primary">
+      <a class="btn ghost" href="#about">About</a>
+      <a class="btn ghost" href="#program">Program</a>
+      <a class="btn ghost" href="#venue">Venue</a>
+      <a class="btn ghost" href="#contact">Contact</a>
+      <a class="btn" href="#register">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="pill" aria-label="Key facts">
+          <span>May 15–17, 2026</span>
+          <span>•</span>
+          <span>Stuttgart, Germany</span>
+        </div>
+        <h1>SNT 2026</h1>
+        <p>Organised by <strong>Selfnet e.V.</strong>, a student organisation providing internet access and practical knowledge. Three days of talks, workshops, and hands‑on labs on networking, security, and operations.</p>
+        <div class="cta">
+          <a class="btn primary" href="#register">Reserve your seat</a>
+          <a class="btn ghost" href="#sponsors">Become a sponsor</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="kpis" aria-label="Event metrics">
+          <div class="kpi"><div class="big">500+</div><div class="label">Attendees</div></div>
+          <div class="kpi"><div class="big">30+</div><div class="label">Sessions</div></div>
+          <div class="kpi"><div class="big">12</div><div class="label">Workshops</div></div>
+          <div class="kpi"><div class="big">3</div><div class="label">Days</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Selfnet e.V.</h2>
+      <div class="grid">
+        <div class="span-8">
+          <div class="card">
+            <p>Selfnet e.V. is a student-run non-profit focused on operating reliable networks for student housing and on sharing operational knowledge. We connect students, academia, and industry to advance practical networking skills.</p>
+          </div>
+        </div>
+        <div class="span-4">
+          <div class="item">
+            <strong>What we do</strong>
+            <ul>
+              <li>Campus and housing internet</li>
+              <li>Workshops and talks</li>
+              <li>Open-source operations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="section">
+      <h2>Program Highlights</h2>
+      <div class="grid">
+        <div class="span-6">
+          <div class="item">
+            <strong>Talks</strong>
+            <p>Routing at scale, campus Wi‑Fi design, BGP security, automation, monitoring, and incident response.</p>
+          </div>
+        </div>
+        <div class="span-6">
+          <div class="item">
+            <strong>Workshops</strong>
+            <p>Hands‑on labs with lab kits. Bring a laptop. Limited seats.</p>
+          </div>
+        </div>
+        <div class="span-6">
+          <div class="item">
+            <strong>Community</strong>
+            <p>Meet peers from student networks and operators across Europe.</p>
+          </div>
+        </div>
+        <div class="span-6">
+          <div class="item">
+            <strong>CFP</strong>
+            <p>Call for Proposals opens Q4 2025. Submit talks and workshops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="venue" class="section">
+      <h2>Venue</h2>
+      <div class="card">
+        <p>Stuttgart, Germany. Exact venue will be announced. All areas are accessible. Quiet room and prayer space available.</p>
+      </div>
+    </section>
+
+    <section id="sponsors" class="section">
+      <h2>Sponsors</h2>
+      <div class="card">
+        <p>We welcome partners who support practical education in networking and operations. Sponsor prospectus available on request.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:events@selfnet.de?subject=Sponsorship%20SNT%202026">Request prospectus</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="section">
+      <h2>Registration</h2>
+      <div class="grid">
+        <div class="span-8">
+          <div class="card">
+            <p>Early‑bird tickets open Q1 2026. Student discounts available. Scholarships for volunteers.</p>
+            <div class="cta">
+              <a class="btn primary" href="mailto:events@selfnet.de?subject=Register%20for%20SNT%202026">Pre‑register by email</a>
+              <a class="btn ghost" href="#program">View program</a>
+            </div>
+          </div>
+        </div>
+        <div class="span-4">
+          <div class="item">
+            <strong>Inclusion</strong>
+            <p>Code of Conduct applies. We enforce it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div class="span-6">
+          <div class="card">
+            <p>Email: <a href="mailto:events@selfnet.de">events@selfnet.de</a></p>
+            <p>Website: <a href="https://selfnet.de" target="_blank" rel="noopener">selfnet.de</a></p>
+          </div>
+        </div>
+        <div class="span-6">
+          <div class="item">
+            <strong>Follow</strong>
+            <p>Socials to be announced.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer" role="contentinfo">
+    <p>&copy; 2026 Selfnet e.V. All rights reserved.</p>
+    <p><strong>Statement:</strong> We would be a better host than KIT/HaDiKo.</p>
+    <p><small>Privacy: no tracking. Cookies only for basic functionality if needed.</small></p>
+  </footer>
+</body>
+</html>
